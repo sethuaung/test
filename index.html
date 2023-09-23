@@ -85,6 +85,30 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
     </div>
   </div>
+  <!-- Customer URL -->
+  <div class="w3-row">
+    <div class="w3-quarter w3-container w3-center">
+      <img src="images/Mingalar_sky_logo.png" alt="" width="100%"><hr>
+      <a href="https://sky.smilaxhr.com/Secure/Login" class="w3-button w3-black w3-round-large">SSHR Login</a>
+    </div>
+    <div class="w3-quarter w3-container w3-center">
+      <img src="images/nova-150x150.png" alt="" width="100%"><hr>
+      <a href="https://acn.smilaxhr.com/Secure/Login" class="w3-button w3-black w3-round-large">SSHR Login</a>
+    </div>
+    <div class="w3-half">
+      <div class="w3-row">
+        <div class="w3-col w3-container w3-center" style="width:50%">
+          <img src="images/nova-150x150.png" alt="" width="100%"><hr>
+          <a href="https://acn.smilaxhr.com/Secure/Login" class="w3-button w3-black w3-round-large">SSHR Login</a>
+        </div>
+        <div class="w3-rest w3-container w3-center">
+          <img src="images/nova-150x150.png" alt="" width="100%"><hr>
+          <a href="https://acn.smilaxhr.com/Secure/Login" class="w3-button w3-black w3-round-large">SSHR Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="w3-container w3-grayscale" id="about">
     <div class="w3-center">
       <h2>About Us</h2>
@@ -137,6 +161,14 @@ body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
     </div>
     <br><hr>
   </div>
+
+  <!-- slider -->
+  <div class="w3-content w3-section" style="max-width:500px">
+    <p></p>
+    <img class="mySlides w3-animate-fading" src="images/Mingalar_sky_logo.png" style="width:100%;">
+    <img class="mySlides w3-animate-fading" src="images/nova-150x150.png" style="width:100%;">
+  </div>
+
   <div class="w3-row w3-grayscale">
     <div class="w3-center">
       <h2>Our Works</h2>
@@ -235,6 +267,23 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
+// slider
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000);    
+}
+
 </script>
 
 </body>
